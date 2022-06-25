@@ -4,12 +4,21 @@ public class Round : MonoBehaviour {
     
     public float damage;
     public float pushForce;
+    public float destroyTime= 1f;
     GameObject player;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        Destroy(gameObject, destroyTime);
     }
+
+
+    void Update()
+    {
+        
+    }
+
 
     void OnCollisionEnter(Collision other) {
         Target target = other.gameObject.GetComponent<Target>();
