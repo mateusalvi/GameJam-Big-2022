@@ -14,6 +14,8 @@ public class Gun : MonoBehaviour {
     public GameObject round;
     public int ammunition;
 
+    [SerializeField] GameObject meshGun;
+
     [SerializeField] GameObject playerCamera;
 
     [Range(0.5f, 10)] public float reloadTime;
@@ -49,6 +51,7 @@ public class Gun : MonoBehaviour {
                 // If the gun is ready to shoot again...
                 if(Time.time > nextShootTime) {
                     shootState = ShootState.Ready;
+                    meshGun.SetActive(true);
                 }
                 break;
             case ShootState.Reloading:
@@ -67,6 +70,7 @@ public class Gun : MonoBehaviour {
         if(shootState == ShootState.Ready) {
             for(int i = 0; i < roundsPerShot; i++) {
                 // Instantiates the round at the muzzle position
+                meshGun.SetActive(false);
                 GameObject spawnedRound = Instantiate(
                     round,
                     transform.position + playerCamera.transform.forward * muzzleOffset,
