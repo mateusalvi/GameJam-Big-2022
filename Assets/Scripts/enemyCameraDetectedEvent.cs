@@ -1,3 +1,4 @@
+using SensorToolkit;
 using SensorToolkit.Example;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,11 +20,14 @@ public class enemyCameraDetectedEvent : MonoBehaviour
         
     }
 
-    public void GameOver()
+    public void GameOver(GameObject hit, Sensor sensor)
     {
         Debug.Log("Game Over");
         //securityCamera.SpotLight.color = securityCamera.AlarmColour;
-        securityCamera.StopAllCoroutines();
-        securityCamera.StartCoroutine(securityCamera.alarmState());
+        if (hit.CompareTag("Player")){
+            securityCamera.StopAllCoroutines();
+            securityCamera.StartCoroutine(securityCamera.alarmState());
+        }
+      
     }
 }
