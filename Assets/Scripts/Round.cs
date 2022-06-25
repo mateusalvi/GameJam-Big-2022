@@ -19,7 +19,7 @@ public class Round : MonoBehaviour {
         
     }
 
-
+    /*
     void OnCollisionEnter(Collision other) {
         Target target = other.gameObject.GetComponent<Target>();
         // Only attempts to inflict damage if the other game object has
@@ -30,7 +30,7 @@ public class Round : MonoBehaviour {
         }
         Destroy(gameObject);
     }
-
+    */
 
     private void OnTriggerEnter(Collider other)
     {
