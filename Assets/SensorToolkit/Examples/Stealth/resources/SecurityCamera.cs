@@ -96,7 +96,7 @@ namespace SensorToolkit.Example
             StartCoroutine(scanState());
         }
 
-        IEnumerator alarmState()
+        public IEnumerator alarmState()
         {
             targetRotation = transform.rotation;
             SpotLight.color = AlarmColour;
