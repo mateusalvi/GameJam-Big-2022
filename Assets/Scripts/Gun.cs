@@ -14,6 +14,8 @@ public class Gun : MonoBehaviour {
     public GameObject round;
     public int ammunition;
 
+    [SerializeField] GameObject playerCamera;
+
     [Range(0.5f, 10)] public float reloadTime;
 
     private int remainingAmmunition;
@@ -67,7 +69,7 @@ public class Gun : MonoBehaviour {
                 // Instantiates the round at the muzzle position
                 GameObject spawnedRound = Instantiate(
                     round,
-                    transform.position + transform.forward * muzzleOffset,
+                    transform.position + playerCamera.transform.forward * muzzleOffset,
                     transform.rotation
                 );
 
@@ -79,7 +81,7 @@ public class Gun : MonoBehaviour {
                 ));
 
                 Rigidbody rb = spawnedRound.GetComponent<Rigidbody>();
-                rb.velocity = spawnedRound.transform.forward * roundSpeed;
+                rb.velocity = playerCamera.transform.forward * roundSpeed;
             }
 
             remainingAmmunition--;

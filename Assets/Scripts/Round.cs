@@ -11,5 +11,6 @@ public class Round : MonoBehaviour {
             target.Hit(damage);
             Destroy(gameObject); // Deletes the round
         }
+        Destroy(gameObject);
     }
 }
