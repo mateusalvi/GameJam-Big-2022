@@ -22,7 +22,8 @@ public class enemyCameraDetectedEvent : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over");
-        securityCamera.SpotLight.color = securityCamera.AlarmColour;
-        //gameObject.Find("SecurityCamera").GetComponent<SecurityCamera>().StartCoroutine(alarmState());
+        //securityCamera.SpotLight.color = securityCamera.AlarmColour;
+        securityCamera.StopAllCoroutines();
+        securityCamera.StartCoroutine(securityCamera.alarmState());
     }
 }
