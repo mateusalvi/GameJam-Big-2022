@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 3285036580594551769}
   - component: {fileID: 3285036580588872817}
   - component: {fileID: 3285036580588867223}
+  - component: {fileID: 2036396675335698744}
   m_Layer: 0
   m_Name: SecurityCamera
   m_TagString: Untagged
@@ -239,6 +240,19 @@ MonoBehaviour:
   ScanColour: {r: 0.30882353, g: 1, b: 0.30882353, a: 1}
   TrackColour: {r: 1, g: 0.9829615, b: 0.38235295, a: 1}
   AlarmColour: {r: 1, g: 0.28676468, b: 0.28676468, a: 1}
+--- !u!114 &2036396675335698744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3285036580594818167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227542147fced26459bce195345762a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  securityCamera: {fileID: 3285036580588867223}
 --- !u!1 &3285036580594818277
 GameObject:
   m_ObjectHideFlags: 0

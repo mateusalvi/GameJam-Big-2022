@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -141,7 +141,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.86
   m_Center: {x: 0, y: 0, z: 0}
---- !u!43 &305524746
+--- !u!43 &375102308
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -347,22 +347,22 @@ PrefabInstance:
     - target: {fileID: 3285036580588773609, guid: 707dbef775e37764283e8c716ac6657e, type: 3}
       propertyPath: OnDetected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11500000, guid: 227542147fced26459bce195345762a4, type: 3}
+      objectReference: {fileID: 1061418030}
     - target: {fileID: 3285036580588773609, guid: 707dbef775e37764283e8c716ac6657e, type: 3}
       propertyPath: OnDetected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3285036580588773609, guid: 707dbef775e37764283e8c716ac6657e, type: 3}
       propertyPath: OnDetected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: GameOver
       objectReference: {fileID: 0}
     - target: {fileID: 3285036580588773609, guid: 707dbef775e37764283e8c716ac6657e, type: 3}
       propertyPath: OnDetected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: 
+      value: enemyCameraDetectedEvent, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3285036580588773609, guid: 707dbef775e37764283e8c716ac6657e, type: 3}
       propertyPath: OnDetected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3285036580594551769, guid: 707dbef775e37764283e8c716ac6657e, type: 3}
       propertyPath: m_RootOrder
@@ -415,7 +415,7 @@ PrefabInstance:
     - target: {fileID: 3285036580601273965, guid: 707dbef775e37764283e8c716ac6657e, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 305524746}
+      objectReference: {fileID: 375102308}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 707dbef775e37764283e8c716ac6657e, type: 3}
 --- !u!1 &513630442 stripped
@@ -548,24 +548,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca9c1e2fd49b3148ae073b6e65ba09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1061418026 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3285036580594818167, guid: 707dbef775e37764283e8c716ac6657e, type: 3}
+--- !u!114 &1061418030 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2036396675335698744, guid: 707dbef775e37764283e8c716ac6657e, type: 3}
   m_PrefabInstance: {fileID: 507040334}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1061418030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061418026}
-  m_Enabled: 0
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 227542147fced26459bce195345762a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  securityCamera: {fileID: 1061418026}
 --- !u!1 &1152762025 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7953448671907935490, guid: 1572a29912188574aa01b02ffa32b7b3, type: 3}

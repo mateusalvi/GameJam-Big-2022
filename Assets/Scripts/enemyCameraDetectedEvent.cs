@@ -1,10 +1,11 @@
+using SensorToolkit.Example;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class enemyCameraDetectedEvent : MonoBehaviour
 {
-    [SerializeField] GameObject securityCamera;
+    [SerializeField] SecurityCamera securityCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class enemyCameraDetectedEvent : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over");
-        securityCamera.GetComponent<SecurityCamera>().SpotLight.color = AlarmColour;
+        securityCamera.SpotLight.color = securityCamera.AlarmColour;
         //gameObject.Find("SecurityCamera").GetComponent<SecurityCamera>().StartCoroutine(alarmState());
     }
 }
