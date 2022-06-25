@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 4470689417843542973}
   - component: {fileID: 3822379084417787724}
   - component: {fileID: -7978120012438808280}
+  - component: {fileID: 7263710798972708960}
   m_Layer: 3
   m_Name: brick
   m_TagString: Untagged
@@ -259,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  pushForce: 2
 --- !u!54 &3822379084417787724
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -287,6 +289,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &7263710798972708960
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4471770209528155114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 0.9, z: 0.9}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4471904123393765240
 GameObject:

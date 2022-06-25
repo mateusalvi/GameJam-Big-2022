@@ -1,7 +1,15 @@
 using UnityEngine;
 
 public class Round : MonoBehaviour {
+    
     public float damage;
+    public float pushForce;
+    GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     void OnCollisionEnter(Collision other) {
         Target target = other.gameObject.GetComponent<Target>();
@@ -12,5 +20,16 @@ public class Round : MonoBehaviour {
             Destroy(gameObject); // Deletes the round
         }
         Destroy(gameObject);
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            EnemyScript enemy = other.gameObject.GetComponent<EnemyScript>();
+            enemy.AddImpact(transform.position - player.gameObject.transform.position, pushForce * damage);
+
+        }
     }
 }
