@@ -8,9 +8,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    EventInstance soundAmbience;
+
+    int enemyNumber = 0;
+
     void Start()
     {
-      
+        soundAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/BGM/bgm_gameplay");
+        soundAmbience.start();
     }
 
     // Start is called before the first frame update
