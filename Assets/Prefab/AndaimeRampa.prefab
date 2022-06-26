@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1653573577108702310}
   - component: {fileID: 2404209704856603587}
   - component: {fileID: 484559949353369353}
-  - component: {fileID: 1258779277799103260}
+  - component: {fileID: 1575077153130251656}
   m_Layer: 0
   m_Name: AndaimeRampa
   m_TagString: Untagged
@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141880282590551772}
-  m_Mesh: {fileID: -3225246161547136098, guid: 0354b93bc2be2e847bf53b9efc9630a3, type: 3}
+  m_Mesh: {fileID: -8332917291866146635, guid: 0354b93bc2be2e847bf53b9efc9630a3, type: 3}
 --- !u!23 &484559949353369353
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 0354b93bc2be2e847bf53b9efc9630a3, type: 3}
+  - {fileID: 2100000, guid: 2a8293f4fe0564d47bdcc4fafc97d3f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1258779277799103260
+--- !u!64 &1575077153130251656
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,4 +95,4 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -3225246161547136098, guid: 0354b93bc2be2e847bf53b9efc9630a3, type: 3}
+  m_Mesh: {fileID: -8332917291866146635, guid: 0354b93bc2be2e847bf53b9efc9630a3, type: 3}

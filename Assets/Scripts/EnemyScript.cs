@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyScript : MonoBehaviour
 {
     float mass = 1.0f; // defines the character mass
+    [SerializeField] private float damage;
     Vector3 impact = Vector3.zero;
 
     NavMeshAgent navMeshAgent;
@@ -37,6 +38,7 @@ public class EnemyScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerManager.AddImpact(other.gameObject.transform.position - transform.position, punchForce);
+            other.gameObject.GetComponent<CharacterStats>().TakeDamage(damage);
         }
     }
 
