@@ -79,8 +79,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce14f0a9e3450e64ebd4b7dff2f902e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammunitionValue: 4
-  gun: {fileID: 0}
+  AmmunitionValue: 5
+  RotationSpeed: 20
+  RespawnTime: 5
+  UnactiveSize: {x: 0.1, y: 0.1, z: 0.1}
 --- !u!135 &8317471418978578312
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -147,6 +149,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f134c1e54d47b4b419c0c8937970f05c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20500000, guid: f134c1e54d47b4b419c0c8937970f05c, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -235,6 +241,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20500000, guid: f134c1e54d47b4b419c0c8937970f05c, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f134c1e54d47b4b419c0c8937970f05c, type: 3}
 --- !u!4 &2703982618367127575 stripped
@@ -297,6 +307,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20500000, guid: f134c1e54d47b4b419c0c8937970f05c, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f134c1e54d47b4b419c0c8937970f05c, type: 3}
 --- !u!4 &3141757421899413052 stripped
@@ -357,6 +371,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f134c1e54d47b4b419c0c8937970f05c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20500000, guid: f134c1e54d47b4b419c0c8937970f05c, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
