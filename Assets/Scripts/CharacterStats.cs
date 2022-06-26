@@ -1,16 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour
 {
     [SerializeField] private float health;
+
     private bool isAlive;
+
+    [SerializeField] Slider healthUI;
 
     // Start is called before the first frame update
     void Start()
     {
         isAlive = true;
+
+        healthUI.maxValue = health;
+
+        if (healthUI != null)
+        {
+            healthUI.value = health;
+        }
+      
     }
 
     // Update is called once per frame
@@ -22,7 +34,12 @@ public class CharacterStats : MonoBehaviour
     public void TakeDamage(float damageTaken)
     {
         health -= damageTaken;
-        if(health <= 0){
+        if (healthUI != null)
+        {
+            healthUI.value = health;
+        }
+
+        if (health <= 0){
             killCharacter();
         }
     }
