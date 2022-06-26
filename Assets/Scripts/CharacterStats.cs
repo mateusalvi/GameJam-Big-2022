@@ -16,10 +16,9 @@ public class CharacterStats : MonoBehaviour
     {
         isAlive = true;
 
-        healthUI.maxValue = health;
-
         if (healthUI != null)
         {
+            healthUI.maxValue = health;
             healthUI.value = health;
         }
       

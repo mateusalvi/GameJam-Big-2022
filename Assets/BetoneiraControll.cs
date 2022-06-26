@@ -36,28 +36,11 @@ public class BetoneiraControll : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E) && !working)
             {
-                working = true;
-                player.transform.SetParent(verticalAxisBase.transform);
-                player.GetComponent<PlayerManager>().DisablePlayer();
-  
-                player.transform.position = playerSeat.position;
-                player.transform.rotation = playerSeat.rotation;
+                Mount();
             }
             else if(Input.GetKeyDown(KeyCode.E) && working)
             {
-                working = false;
-
-                player.transform.position = playerOutPos.position;
-                player.transform.rotation = playerOutPos.rotation;
-
-                player.transform.SetParent(null);
-
-                player.GetComponent<PlayerManager>().EnablePlayer();
-   
-                verticalAxisBase.transform.rotation = new Quaternion(0f, 0f, 0f,0f);
-
-                player.GetComponent<HUDcontroller>().hideInteraction();
-                canInteract = false;
+                Drop();
             }
         }
 
@@ -90,7 +73,6 @@ public class BetoneiraControll : MonoBehaviour
             canInteract = true;
             player.GetComponent<HUDcontroller>().showInteraction();
         }
-       
     }
 
     private void OnTriggerExit(Collider other)
@@ -100,5 +82,32 @@ public class BetoneiraControll : MonoBehaviour
             canInteract = false;
             player.GetComponent<HUDcontroller>().hideInteraction();
         }
+    }
+
+    void Mount()
+    {
+        working = true;
+        player.transform.SetParent(verticalAxisBase.transform);
+        player.GetComponent<PlayerManager>().DisablePlayer();
+
+        player.transform.position = playerSeat.position;
+        player.transform.rotation = playerSeat.rotation;
+    }
+
+    void Drop()
+    {
+        working = false;
+
+        player.transform.position = playerOutPos.position;
+        player.transform.rotation = playerOutPos.rotation;
+
+        player.transform.SetParent(null);
+
+        player.GetComponent<PlayerManager>().EnablePlayer();
+
+        verticalAxisBase.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+
+        player.GetComponent<HUDcontroller>().hideInteraction();
+        canInteract = false;
     }
 }
