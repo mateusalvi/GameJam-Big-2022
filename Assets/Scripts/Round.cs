@@ -22,7 +22,7 @@ public class Round : MonoBehaviour {
 
     void Update()
     {
-        if(rb.velocity.y <= 2 && rb.velocity.x <= 2 && rb.velocity.z <= 2)
+        if(rb.velocity.y <= 1 && rb.velocity.x <= 1 && rb.velocity.z <= 1)
         {
             alreadyDamaged = true;
         }
