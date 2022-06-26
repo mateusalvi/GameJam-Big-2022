@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 176792522379734381}
+  - component: {fileID: 3716450610862567395}
   m_Layer: 0
   m_Name: Banheiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &176792522379734381
 Transform:
@@ -29,9 +30,30 @@ Transform:
   m_Children:
   - {fileID: 3290782716643726759}
   - {fileID: 7753452036683229866}
+  - {fileID: 6120876462411957756}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3716450610862567395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666470555298559959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e49b9d9a5ab53458bb3617ab8fc569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInterval: 20
+  minSpawnInterval: 1
+  openDoorInterval: 2
+  spawnTimeDecreaseOverTime: 5
+  decreaseInterval: 100
+  enemyToSpawn: {fileID: 5702082039490719569, guid: e571c4df5622a9d46a4505d9624d9297, type: 3}
+  spawnPoint: {fileID: 6120876462411957756}
+  anim: {fileID: 431974623281839104}
 --- !u!1 &666871918518623610
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,6 +67,7 @@ GameObject:
   - component: {fileID: 8777314042075827115}
   - component: {fileID: 431974623281839107}
   - component: {fileID: 431974623281839104}
+  - component: {fileID: 6083491035763119198}
   m_Layer: 0
   m_Name: PortaBanheiro
   m_TagString: Untagged
@@ -147,6 +170,52 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!208 &6083491035763119198
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666871918518623610}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.011000001, y: 0.001, z: 0.020000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.011000001, y: -0.001, z: 0.021000002}
+  m_TimeToStationary: 0.5
+--- !u!1 &3509393470138327396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6120876462411957756}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6120876462411957756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3509393470138327396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.67, y: 0.36, z: 0.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 176792522379734381}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8302225672638649276
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +233,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3290782716643726759
 Transform:
@@ -174,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8302225672638649276}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5.502827, y: 0, z: 0}
+  m_LocalPosition: {x: -5.502827, y: -0.11, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 176792522379734381}

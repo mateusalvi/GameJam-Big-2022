@@ -85,13 +85,20 @@ public class BetoneiraControll : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        canInteract = true;
-        player.GetComponent<HUDcontroller>().showInteraction();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            canInteract = true;
+            player.GetComponent<HUDcontroller>().showInteraction();
+        }
+       
     }
 
     private void OnTriggerExit(Collider other)
     {
-        canInteract = false;
-        player.GetComponent<HUDcontroller>().hideInteraction();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            canInteract = false;
+            player.GetComponent<HUDcontroller>().hideInteraction();
+        }
     }
 }

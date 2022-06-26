@@ -184,7 +184,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunModel: {fileID: 5795772346080816412}
   hudPointerGun: {fileID: 1563315496713066020}
-  canInteract: 0
 --- !u!114 &832549909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,6 +393,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.92156863
       objectReference: {fileID: 0}
+    - target: {fileID: 513547181186655142, guid: 73b2dcdd0ec8615498dda81a928797aa, type: 3}
+      propertyPath: m_Name
+      value: HUD Gun_Interaction
+      objectReference: {fileID: 0}
     - target: {fileID: 513547181628771086, guid: 73b2dcdd0ec8615498dda81a928797aa, type: 3}
       propertyPath: m_Name
       value: HUD UI
@@ -536,7 +539,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1260099017310366521, guid: eeee87e344a3095438371e8940d76521, type: 3}
       propertyPath: m_Name
-      value: ViewModel
+      value: GunModel
       objectReference: {fileID: 0}
     - target: {fileID: 3418845855709100169, guid: eeee87e344a3095438371e8940d76521, type: 3}
       propertyPath: meshGun

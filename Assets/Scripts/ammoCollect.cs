@@ -5,7 +5,6 @@ using UnityEngine;
 public class ammoCollect : MonoBehaviour
 {
     public int ammunitionValue;
-    [SerializeField] Gun gun;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +21,7 @@ public class ammoCollect : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player") {
             Destroy(gameObject);
-            gun.giveRemaningAmmunition(ammunitionValue);
+            other.gameObject.GetComponent<CharacterShooting>().gun.giveRemaningAmmunition(ammunitionValue);
         }
     }
 }
