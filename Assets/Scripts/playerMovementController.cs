@@ -15,6 +15,7 @@ public class playerMovementController : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
     public float footstepsAudioInterval;
+    public float runFootstepsAudioInterval;
     private float nextFootstepSoundTime;
 
     CharacterController characterController;
@@ -73,18 +74,26 @@ public class playerMovementController : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+            playFootSteps(isRunning);
         }
-        playFootSteps();
+        
     }
 
-    public void playFootSteps()
+    public void playFootSteps(bool isRunning)
     {
-        if(nextFootstepSoundTime >= Time.time){
-            nextFootstepSoundTime = Time.time + footstepsAudioInterval;
-            if((Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0))
+        if(nextFootstepSoundTime <= Time.time){
+            
+            if(characterController.isGrounded && (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0))
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Player/player_footsteps");
+                nextFootstepSoundTime = Time.time + footstepsAudioInterval;
             }
+            if(characterController.isGrounded && (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0) && isRunning)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Player/player_footsteps");
+                nextFootstepSoundTime = Time.time + runFootstepsAudioInterval;
+            }
+            
         }
     }
 }

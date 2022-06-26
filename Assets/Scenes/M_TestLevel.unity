@@ -857,6 +857,10 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7953448671907935548, guid: 1572a29912188574aa01b02ffa32b7b3, type: 3}
+      propertyPath: runFootstepsAudioInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7953448671907935548, guid: 1572a29912188574aa01b02ffa32b7b3, type: 3}
       propertyPath: onMove.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
