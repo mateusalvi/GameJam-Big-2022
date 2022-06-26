@@ -4,7 +4,8 @@ public class Gun : MonoBehaviour {
     public enum ShootState {
         Ready,
         Shooting,
-        Reloading
+        Reloading,
+        NoAmmo
     }
 
     // How far forward the muzzle is from the centre of the gun
@@ -13,6 +14,8 @@ public class Gun : MonoBehaviour {
     [Header("Magazine")]
     public GameObject round;
     public int ammunition;
+
+    [SerializeField] GameObject meshGun;
 
     [SerializeField] GameObject playerCamera;
 
@@ -47,8 +50,9 @@ public class Gun : MonoBehaviour {
         switch(shootState) {
             case ShootState.Shooting:
                 // If the gun is ready to shoot again...
-                if(Time.time > nextShootTime) {
+                if((Time.time > nextShootTime) && (remainingAmmunition > 0)) {
                     shootState = ShootState.Ready;
+                    meshGun.SetActive(true);
                 }
                 break;
             case ShootState.Reloading:
@@ -67,6 +71,7 @@ public class Gun : MonoBehaviour {
         if(shootState == ShootState.Ready) {
             for(int i = 0; i < roundsPerShot; i++) {
                 // Instantiates the round at the muzzle position
+                meshGun.SetActive(false);
                 GameObject spawnedRound = Instantiate(
                     round,
                     transform.position + playerCamera.transform.forward * muzzleOffset,
@@ -88,9 +93,17 @@ public class Gun : MonoBehaviour {
             if(remainingAmmunition > 0) {
                 nextShootTime = Time.time + (1 / fireRate);
                 shootState = ShootState.Shooting;
-            } else {
-                Reload();
             }
+            if(remainingAmmunition <= 0) {
+                shootState = ShootState.NoAmmo;
+            }
+        }
+    }
+
+    public void giveRemaningAmmunition(int ammo){
+        remainingAmmunition += ammo;
+        if(shootState == ShootState.NoAmmo){
+            shootState = ShootState.Ready;
         }
     }
 
