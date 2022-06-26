@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3822379084417787724}
   - component: {fileID: -7978120012438808280}
   - component: {fileID: 2077040229042466940}
+  - component: {fileID: 6894873934609430589}
   m_Layer: 3
   m_Name: brick
   m_TagString: Untagged
@@ -151,6 +152,7 @@ MonoBehaviour:
   damage: 5
   pushForce: 2
   destroyTime: 10
+  initialRotationForce: 10
 --- !u!54 &3822379084417787724
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -193,3 +195,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6894873934609430589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4471770209528155114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 607654476
+      Data2: 1136179272
+      Data3: 806332084
+      Data4: 203472631
+    Path: event:/Guns/shot_impact
+  Event: 
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

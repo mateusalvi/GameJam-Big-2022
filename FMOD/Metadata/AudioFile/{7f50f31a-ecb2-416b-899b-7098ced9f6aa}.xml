@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7f50f31a-ecb2-416b-899b-7098ced9f6aa}">
+		<property name="assetPath">
+			<value>sfx-shot_brick_04.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.052666666666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e246803c-3b1a-4889-b1fe-0956780e4740}</destination>
+		</relationship>
+	</object>
+</objects>

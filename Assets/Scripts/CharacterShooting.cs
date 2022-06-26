@@ -15,4 +15,9 @@ public class CharacterShooting : MonoBehaviour {
             gun.Reload();
         }
     }
+
+    public void playShotSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Guns/shot_brick");
+    }
 }

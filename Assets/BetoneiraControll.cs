@@ -110,4 +110,9 @@ public class BetoneiraControll : MonoBehaviour
         player.GetComponent<HUDcontroller>().hideInteraction();
         canInteract = false;
     }
+
+    public void playShotSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Guns/shot_concrete_mixer");
+    }
 }

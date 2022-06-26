@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{22f11dea-2c2b-48de-833a-1a6db2ce7a95}">
+		<property name="name">
+			<value>if_not_finished</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7092f29e-1489-49f5-b629-9b09456392ee}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d2223152-8c0b-4380-94ff-1999389374b8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d2223152-8c0b-4380-94ff-1999389374b8}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{44a85319-07d8-4519-8746-9b6bdb3494de}">
+		<property name="assetPath">
+			<value>sfx-shot_nail_gun_07.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.37333333333333335</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e246803c-3b1a-4889-b1fe-0956780e4740}</destination>
+		</relationship>
+	</object>
+</objects>

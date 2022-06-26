@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{e1bbc7e8-9f34-4f31-a7d1-87bd0073085d}">
+		<property name="name">
+			<value>when_in_sight</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7092f29e-1489-49f5-b629-9b09456392ee}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{8770f8fa-9843-4711-b1e5-d0e5c92cd85b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{8770f8fa-9843-4711-b1e5-d0e5c92cd85b}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
