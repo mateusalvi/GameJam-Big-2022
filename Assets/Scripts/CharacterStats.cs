@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour
@@ -10,6 +11,8 @@ public class CharacterStats : MonoBehaviour
     private bool isAlive;
 
     [SerializeField] Slider healthUI;
+
+    public UnityEvent OnUnityDead;
 
     // Start is called before the first frame update
     void Start()
@@ -47,5 +50,10 @@ public class CharacterStats : MonoBehaviour
     {
         isAlive = false;
         Destroy(gameObject);
+
+        if (OnUnityDead != null)
+        {
+            OnUnityDead.Invoke();
+        }
     }
 }
