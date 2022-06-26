@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Gun : MonoBehaviour {
     public enum ShootState {
@@ -40,6 +41,8 @@ public class Gun : MonoBehaviour {
 
     // The next time that the gun is able to shoot at
     private float nextShootTime = 0;
+
+    public UnityEvent onShoot;
 
     void Start() {
         muzzleOffset = GetComponent<Renderer>().bounds.extents.z;
@@ -87,6 +90,11 @@ public class Gun : MonoBehaviour {
 
                 Rigidbody rb = spawnedRound.GetComponent<Rigidbody>();
                 rb.velocity = playerCamera.transform.forward * roundSpeed;
+            }
+
+            if(onShoot != null)
+            {
+                onShoot.Invoke();
             }
 
             remainingAmmunition--;

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{41467894-6783-4b74-b8a7-63d6059ccbe4}">
+		<property name="name">
+			<value>bgm-increase</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7092f29e-1489-49f5-b629-9b09456392ee}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{6180eeb7-7bc1-4922-a0de-7ec6357234aa}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{6180eeb7-7bc1-4922-a0de-7ec6357234aa}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

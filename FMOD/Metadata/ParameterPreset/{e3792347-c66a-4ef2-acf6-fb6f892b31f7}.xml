@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{e3792347-c66a-4ef2-acf6-fb6f892b31f7}">
+		<property name="name">
+			<value>with_concrete_mixer</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7092f29e-1489-49f5-b629-9b09456392ee}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{874ead82-7cb1-4b94-939f-8bdd6bb35668}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{874ead82-7cb1-4b94-939f-8bdd6bb35668}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

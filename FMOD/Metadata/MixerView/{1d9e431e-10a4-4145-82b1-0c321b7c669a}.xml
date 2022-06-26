@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="UiMixerView" id="{1d9e431e-10a4-4145-82b1-0c321b7c669a}">
+		<property name="name">
+			<value>Mixer Geral</value>
+		</property>
+		<relationship name="assignedStrips">
+			<destination>{7129aac0-af9a-4069-a4ce-2f1a786382b3}</destination>
+			<destination>{316f971a-e524-4a89-8ea6-4d914ff116fe}</destination>
+			<destination>{a75a252b-b9c7-4868-af93-0bf310463180}</destination>
+			<destination>{40d4cbe7-ef6b-47ac-9c0c-dba54322d1bc}</destination>
+			<destination>{ab510a7e-63ee-4657-a1ee-7f8695c1ea30}</destination>
+			<destination>{e6691289-0677-433a-b9c1-754f946d6b6f}</destination>
+			<destination>{32ef8a66-80b7-4f07-9a0e-bae7f630d2b2}</destination>
+			<destination>{228809be-7ab9-41d2-ab9c-4ffc5a8e517d}</destination>
+			<destination>{e8e8eb7d-0c1a-43aa-a292-4ed0b64ff6b0}</destination>
+			<destination>{a593db45-a29d-485e-b2bf-6c469332b42c}</destination>
+			<destination>{59fdfe1a-edf3-4a9d-974f-90dd28da0154}</destination>
+			<destination>{27304f82-b126-4b47-b1cf-84098dddee03}</destination>
+			<destination>{6b2cb6d8-7363-48dd-8d8f-a2fb979fa339}</destination>
+			<destination>{3e3e6898-e9c3-4819-a875-e5389d7162e3}</destination>
+			<destination>{f3a1c299-33dc-4c6d-a327-07ec001c1695}</destination>
+			<destination>{c6c099cb-8018-47e1-89b9-03f50494202a}</destination>
+			<destination>{72624d0a-cc11-45e2-90b1-04fa516d8acb}</destination>
+			<destination>{76570b4e-acbd-4d21-87e2-735afa17cb76}</destination>
+			<destination>{b18655c4-dcbd-418f-a54c-ebf05fce667b}</destination>
+			<destination>{1ef9dffe-c037-4c78-aa09-2b28f5cc59e5}</destination>
+			<destination>{5425b655-de2c-4444-848d-de50ec9d5eaf}</destination>
+			<destination>{28a1a521-9cc8-4ddd-af86-5df30d166857}</destination>
+			<destination>{9a2602fd-d2b4-4d6c-96fb-a8c726c7347a}</destination>
+			<destination>{12b83524-59cb-4126-b8bb-0ba96e48ce23}</destination>
+			<destination>{dcb8dd08-5a04-4833-a31c-74edd849c121}</destination>
+			<destination>{a58f17d8-bf09-42c9-856c-9871cd707dcb}</destination>
+		</relationship>
+		<relationship name="mixer">
+			<destination>{876c31be-323f-40d0-bc5d-506968246750}</destination>
+		</relationship>
+	</object>
+</objects>

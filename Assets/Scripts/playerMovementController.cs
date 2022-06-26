@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 
@@ -13,6 +14,8 @@ public class playerMovementController : MonoBehaviour
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
+    public float footstepsAudioInterval;
+    private float nextFootstepSoundTime;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
@@ -28,6 +31,7 @@ public class playerMovementController : MonoBehaviour
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        nextFootstepSoundTime = Time.time;
     }
 
     void Update()
@@ -69,6 +73,18 @@ public class playerMovementController : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        }
+        playFootSteps();
+    }
+
+    public void playFootSteps()
+    {
+        if(nextFootstepSoundTime >= Time.time){
+            nextFootstepSoundTime = Time.time + footstepsAudioInterval;
+            if((Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Player/player_footsteps");
+            }
         }
     }
 }

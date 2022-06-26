@@ -5,15 +5,18 @@ public class Round : MonoBehaviour {
     public float damage;
     public float pushForce;
     public float destroyTime;
+    public float initialRotationForce;
     private bool alreadyDamaged = false;
     Rigidbody rb;
     GameObject player;
 
     private void Start()
     {
+        Vector3 torque = new Vector3 (initialRotationForce*(float)Random.Range(0f,10f), initialRotationForce*(float)Random.Range(0f,10f), initialRotationForce*(float)Random.Range(0f,10f));
         player = GameObject.FindGameObjectWithTag("Player");
         Destroy(gameObject, destroyTime);
         rb = GetComponent<Rigidbody>();
+        rb.AddTorque(torque, ForceMode.Force);
     }
 
 
