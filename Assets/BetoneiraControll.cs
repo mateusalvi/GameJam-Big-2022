@@ -23,6 +23,8 @@ public class BetoneiraControll : MonoBehaviour
 
     bool working = false;
 
+    private FMOD.Studio.EventInstance engineSoundLoop;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -87,6 +89,9 @@ public class BetoneiraControll : MonoBehaviour
     void Mount()
     {
         working = true;
+        engineSoundLoop = FMODUnity.RuntimeManager.CreateInstance("event:/Guns/concrete_mixer_loop");
+        engineSoundLoop.start();
+
         player.transform.SetParent(verticalAxisBase.transform);
         player.GetComponent<PlayerManager>().DisablePlayer();
 
@@ -97,6 +102,9 @@ public class BetoneiraControll : MonoBehaviour
     void Drop()
     {
         working = false;
+
+        engineSoundLoop.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        engineSoundLoop.release();
 
         player.transform.position = playerOutPos.position;
         player.transform.rotation = playerOutPos.rotation;
