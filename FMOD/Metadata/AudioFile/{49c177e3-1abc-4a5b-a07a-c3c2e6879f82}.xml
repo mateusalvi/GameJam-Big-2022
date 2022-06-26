@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{49c177e3-1abc-4a5b-a07a-c3c2e6879f82}">
+		<property name="assetPath">
+			<value>sfx-player_hurt_02.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.31022675736961453</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e246803c-3b1a-4889-b1fe-0956780e4740}</destination>
+		</relationship>
+	</object>
+</objects>

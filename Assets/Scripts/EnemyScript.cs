@@ -67,6 +67,6 @@ public class EnemyScript : MonoBehaviour
 
     public void PlayTookDamageSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Enemies/hurt");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Enemies/enemy_hurt");
     }
 }
