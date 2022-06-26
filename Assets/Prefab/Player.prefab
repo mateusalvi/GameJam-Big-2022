@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 7953448671907935548}
   - component: {fileID: 1152762026}
   - component: {fileID: 5001902882233787020}
+  - component: {fileID: 832549909}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -179,6 +180,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f608afb2d4c84eb468a7d4ec943d15a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &832549909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7953448671907935490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82045e364b4ee844b8f52ef5b0f6c081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAmmoText: {fileID: 0}
+  gun: {fileID: 7953448672386940588}
 --- !u!1 &7953448672405462061
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +252,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

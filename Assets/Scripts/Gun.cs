@@ -100,9 +100,15 @@ public class Gun : MonoBehaviour {
         }
     }
 
+    public int GetRemaningAmmunition()
+    {
+        return remainingAmmunition;
+    }
+
     public void giveRemaningAmmunition(int ammo){
         remainingAmmunition += ammo;
         if(shootState == ShootState.NoAmmo){
+            meshGun.SetActive(true);
             shootState = ShootState.Ready;
         }
     }
