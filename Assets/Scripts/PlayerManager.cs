@@ -21,6 +21,20 @@ public class PlayerManager : MonoBehaviour
         impact += dir.normalized * force / mass;
     }
 
+    public void disablePlayer(){
+        GetComponent<CharacterController>().enabled = false;
+        GetComponent<playerMovementController>().enabled = false;
+        GetComponent<CharacterShooting>().enabled = false;
+        GetComponent<HUDcontroller>().enabled = false;
+    }
+
+    public void enablePlayer(){
+        GetComponent<CharacterController>().enabled = true;
+        GetComponent<playerMovementController>().enabled = true;
+        GetComponent<CharacterShooting>().enabled = true;
+        GetComponent<HUDcontroller>().enabled = true;
+    }
+
     void Update()
     {
         // apply the impact force:
