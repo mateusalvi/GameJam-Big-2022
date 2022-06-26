@@ -7,8 +7,10 @@ public class PlayerManager : MonoBehaviour
     float mass = 1.0f; // defines the character mass
     Vector3 impact = Vector3.zero;
     private CharacterController character;
-    [SerializeField] GameObject ViewModel;
- 
+    [SerializeField] GameObject gunModel;
+
+    [SerializeField] GameObject hudPointerGun;
+
     void Start()
     {
         character = GetComponent<CharacterController>();
@@ -22,20 +24,22 @@ public class PlayerManager : MonoBehaviour
         impact += dir.normalized * force / mass;
     }
 
-    public void disablePlayer(){
+    public void DisablePlayer(){
+        GetComponent<Collider>().enabled = false;
         GetComponent<CharacterController>().enabled = false;
         GetComponent<playerMovementController>().enabled = false;
         GetComponent<CharacterShooting>().enabled = false;
-        GetComponent<HUDcontroller>().enabled = false;
-        ViewModel.SetActive(false);
+        hudPointerGun.SetActive(false);
+        gunModel.SetActive(false);
     }
 
-    public void enablePlayer(){
+    public void EnablePlayer(){
+        GetComponent<Collider>().enabled = true;
         GetComponent<CharacterController>().enabled = true;
         GetComponent<playerMovementController>().enabled = true;
         GetComponent<CharacterShooting>().enabled = true;
-        GetComponent<HUDcontroller>().enabled = true;
-        ViewModel.SetActive(true);
+        hudPointerGun.SetActive(true);
+        gunModel.SetActive(true);
     }
 
     void Update()

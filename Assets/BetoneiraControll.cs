@@ -32,16 +32,14 @@ public class BetoneiraControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canInteract)
+        if (canInteract || working)
         {
             if (Input.GetKeyDown(KeyCode.E) && !working)
             {
                 working = true;
                 player.transform.SetParent(verticalAxisBase.transform);
-                player.GetComponent<Collider>().enabled = false;
-                player.GetComponent<CharacterController>().enabled = false;
-                player.GetComponent<playerMovementController>().enabled = false;
-                player.GetComponent<CharacterShooting>().enabled = false;
+                player.GetComponent<PlayerManager>().DisablePlayer();
+  
                 player.transform.position = playerSeat.position;
                 player.transform.rotation = playerSeat.rotation;
             }
@@ -53,13 +51,13 @@ public class BetoneiraControll : MonoBehaviour
                 player.transform.rotation = playerOutPos.rotation;
 
                 player.transform.SetParent(null);
-               
-                player.GetComponent<Collider>().enabled = true;
-                player.GetComponent<CharacterController>().enabled = true;
-                player.GetComponent<playerMovementController>().enabled = true;
-                player.GetComponent<CharacterShooting>().enabled = true;
 
+                player.GetComponent<PlayerManager>().EnablePlayer();
+   
                 verticalAxisBase.transform.rotation = new Quaternion(0f, 0f, 0f,0f);
+
+                player.GetComponent<HUDcontroller>().hideInteraction();
+                canInteract = false;
             }
         }
 
@@ -82,21 +80,18 @@ public class BetoneiraControll : MonoBehaviour
     private void MoveBetoneira()
     {
         transform.Rotate(0f, (Input.GetAxisRaw("Mouse X") * rotationSpeed), 0f);
-        if(verticalAxisBase.transform.rotation.x > -70 && verticalAxisBase.transform.rotation.x < 80)
-        {
-            verticalAxisBase.transform.Rotate((Input.GetAxisRaw("Mouse Y") * rotationSpeed), 0f, 0f);
-        }
-            
+        verticalAxisBase.transform.Rotate((Input.GetAxisRaw("Mouse Y") * rotationSpeed), 0f, 0f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         canInteract = true;
-      
+        player.GetComponent<HUDcontroller>().showInteraction();
     }
 
     private void OnTriggerExit(Collider other)
     {
         canInteract = false;
+        player.GetComponent<HUDcontroller>().hideInteraction();
     }
 }
