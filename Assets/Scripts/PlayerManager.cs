@@ -55,6 +55,11 @@ public class PlayerManager : MonoBehaviour
             if (impact.magnitude > 0.2) character.Move(impact * Time.deltaTime);
             // consumes the impact energy each cycle:
             impact = Vector3.Lerp(impact, Vector3.zero, 5 * Time.deltaTime);
+
+            if(transform.position.y < -20)
+            {
+                FindObjectOfType<GameManager>().RestartScreen();
+            }
         }
     }
 }
