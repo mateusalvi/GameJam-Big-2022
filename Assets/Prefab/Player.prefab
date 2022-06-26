@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f608afb2d4c84eb468a7d4ec943d15a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ViewModel: {fileID: 5795772346080816412}
 --- !u!114 &832549909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +386,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7953448672405462056}
     m_Modifications:
+    - target: {fileID: 1260099017310366521, guid: eeee87e344a3095438371e8940d76521, type: 3}
+      propertyPath: m_Name
+      value: ViewModel
+      objectReference: {fileID: 0}
     - target: {fileID: 3418845855709100169, guid: eeee87e344a3095438371e8940d76521, type: 3}
       propertyPath: meshGun
       value: 
