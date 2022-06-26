@@ -202,10 +202,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 168920662, guid: e571c4df5622a9d46a4505d9624d9297, type: 3}
-      propertyPath: health
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5702082039490719569, guid: e571c4df5622a9d46a4505d9624d9297, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -851,6 +847,22 @@ PrefabInstance:
       propertyPath: currentAmmoText
       value: 
       objectReference: {fileID: 375676310}
+    - target: {fileID: 5794024710114844972, guid: 1572a29912188574aa01b02ffa32b7b3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795301851582934982, guid: 1572a29912188574aa01b02ffa32b7b3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795772346080816412, guid: 1572a29912188574aa01b02ffa32b7b3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795911128287086990, guid: 1572a29912188574aa01b02ffa32b7b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7953448671907935490, guid: 1572a29912188574aa01b02ffa32b7b3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -897,6 +909,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7953448671907935491, guid: 1572a29912188574aa01b02ffa32b7b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265075603216127626, guid: 1572a29912188574aa01b02ffa32b7b3, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
