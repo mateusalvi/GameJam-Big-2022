@@ -882,6 +882,8 @@ MonoBehaviour:
   playerCamera: {fileID: 7953448672405462063}
   lookSpeed: 2
   lookXLimit: 90
+  footstepsAudioInterval: 0.5
+  runFootstepsAudioInterval: 0.3
   canMove: 1
 --- !u!114 &1152762026
 MonoBehaviour:
@@ -1316,6 +1318,34 @@ PrefabInstance:
     - target: {fileID: 3418845855709100169, guid: eeee87e344a3095438371e8940d76521, type: 3}
       propertyPath: maxRoundVariation
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418845855709100169, guid: eeee87e344a3095438371e8940d76521, type: 3}
+      propertyPath: onShoot.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418845855709100169, guid: eeee87e344a3095438371e8940d76521, type: 3}
+      propertyPath: onShoot.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418845855709100169, guid: eeee87e344a3095438371e8940d76521, type: 3}
+      propertyPath: onShoot.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1152762026}
+    - target: {fileID: 3418845855709100169, guid: eeee87e344a3095438371e8940d76521, type: 3}
+      propertyPath: onShoot.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418845855709100169, guid: eeee87e344a3095438371e8940d76521, type: 3}
+      propertyPath: onShoot.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playShotSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418845855709100169, guid: eeee87e344a3095438371e8940d76521, type: 3}
+      propertyPath: onShoot.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CharacterShooting, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418845855709100169, guid: eeee87e344a3095438371e8940d76521, type: 3}
+      propertyPath: onShoot.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3418845855709100182, guid: eeee87e344a3095438371e8940d76521, type: 3}
       propertyPath: m_RootOrder
