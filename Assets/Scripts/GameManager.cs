@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 {
     EventInstance soundAmbience;
 
+    [SerializeField] bool endless = false;
+
     int enemyNumber = 0;
 
     void Start()
@@ -39,8 +41,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         if (SceneManager.GetActiveScene().name == "Restart Scene" || SceneManager.GetActiveScene().name == "Win" || SceneManager.GetActiveScene().name == "Menu")
         {
             Cursor.visible = true;
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
             if (enemies != null)
             {
                 enemyNumber = enemies.Length;
-                soundAmbience.setParameterByName("bgm-increase", 0.05f * enemyNumber);
+                soundAmbience.setParameterByName("bgm-increase", 0.03f * enemyNumber);
             }
 
             CheckWin();
@@ -61,12 +61,18 @@ public class GameManager : MonoBehaviour
 
     void CheckWin()
     {
-          
+        if (!endless)
+        {
+            if (enemyNumber >= 100)
+            {
+                StartWinScene();
+            }
+        }
     }
 
     public void StartWinScene()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
     public void RestartScreen()
@@ -74,10 +80,16 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
-    public void RestartGame()
+    public void StartChallenge()
     {
         SceneManager.LoadScene(1);
     }
+
+    public void StartEndless()
+    {
+        SceneManager.LoadScene(2);
+    }
+
 
     public void ExitGame()
     {

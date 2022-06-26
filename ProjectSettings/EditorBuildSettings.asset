@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/TestLevel.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/SceneArt.unity
+    guid: 092d9bcc5b7fd0846a31d96816b00802
+  - enabled: 1
     path: Assets/Scenes/Restart Scene.unity
-    guid: 0ee7a34158ff25248aba69eab440b701
+    guid: c65b44eabd00a994a87978f85671a11a
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 91e4135d53e6bb642a470f95385c263d
   m_configObjects: {}
