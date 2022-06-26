@@ -16,6 +16,13 @@ public class GameManager : MonoBehaviour
     {
         soundAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/BGM/bgm_gameplay");
         soundAmbience.start();
+
+        EnemyScript[] enemies = FindObjectsOfType<EnemyScript>();
+        if(enemies!= null)
+        {
+            enemyNumber = enemies.Length;
+        }
+       
     }
 
     // Start is called before the first frame update
@@ -32,6 +39,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (SceneManager.GetActiveScene().name == "Restart Scene" || SceneManager.GetActiveScene().name == "Win" || SceneManager.GetActiveScene().name == "Menu")
         {
             Cursor.visible = true;
@@ -39,6 +48,13 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            EnemyScript[] enemies = FindObjectsOfType<EnemyScript>();
+            if (enemies != null)
+            {
+                enemyNumber = enemies.Length;
+                soundAmbience.setParameterByName("bgm-increase", 0.05f * enemyNumber);
+            }
+
             CheckWin();
         }            
     }
@@ -70,8 +86,7 @@ public class GameManager : MonoBehaviour
 
     void OnDestroy()
     {
-      
-
+        soundAmbience.stop(STOP_MODE.IMMEDIATE);
     }
 }
 
