@@ -62,6 +62,7 @@ public class Spawner : MonoBehaviour
                  spawnPoint.rotation
              );
 
+
         
         timeToClose = Time.time + openDoorInterval;
 

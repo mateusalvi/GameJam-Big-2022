@@ -14,10 +14,14 @@ public class EnemyScript : MonoBehaviour
 
     [SerializeField] float punchForce = 50.0f;
 
+    float timeToAwake;
+    float awakeTime = 0.5f;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        timeToAwake = Time.time + awakeTime;
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();   
     }
@@ -25,12 +29,15 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        navMeshAgent.SetDestination(playerManager.gameObject.transform.position);
+        if(Time.time > timeToAwake)
+        {
+            navMeshAgent.SetDestination(playerManager.gameObject.transform.position);
 
-        // apply the impact force:
-        if (impact.magnitude > 0.2) navMeshAgent.Move(impact * Time.deltaTime);
-        // consumes the impact energy each cycle:
-        impact = Vector3.Lerp(impact, Vector3.zero, 5 * Time.deltaTime);
+            // apply the impact force:
+            if (impact.magnitude > 0.2) navMeshAgent.Move(impact * Time.deltaTime);
+            // consumes the impact energy each cycle:
+            impact = Vector3.Lerp(impact, Vector3.zero, 5 * Time.deltaTime);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
