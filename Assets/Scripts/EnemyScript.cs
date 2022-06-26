@@ -64,4 +64,9 @@ public class EnemyScript : MonoBehaviour
         if (dir.y < 0) dir.y = -dir.y; // reflect down force on the ground
         impact += dir.normalized * force / mass;
     }
+
+    public void PlayTookDamageSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Enemies/enemy_hurt");
+    }
 }

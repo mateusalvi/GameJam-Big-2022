@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/PLAYER.bank
   Name: PLAYER
   StudioPath: bank:/PLAYER
-  lastModified: 637918621020000000
+  lastModified: 637918724940000000
   FileSizes:
   - Name: Desktop
-    Value: 221376
+    Value: 237248
   Exists: 1
 --- !u!114 &-8710115661479846846
 MonoBehaviour:
@@ -202,10 +202,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637918621020000000
+  lastModified: 637918724940000000
   FileSizes:
   - Name: Desktop
-    Value: 2426
+    Value: 2496
   Exists: 1
 --- !u!114 &-6283593696560926407
 MonoBehaviour:
@@ -249,7 +249,7 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637918621020000000
+  lastModified: 637918724940000000
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -456,7 +456,7 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 637918621020000000
+  lastModified: 637918724940000000
   FileSizes:
   - Name: Desktop
     Value: 28000
@@ -485,6 +485,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2012451755212987792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/enemy_hurt
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/enemy_hurt
+  Guid:
+    Data1: -1513968398
+    Data2: 1190175584
+    Data3: 1836818069
+    Data4: -1289659780
+  Banks:
+  - {fileID: 2848835066754843194}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 341
 --- !u!114 &-1410798520446942742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,7 +527,7 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/GUNS.bank
   Name: GUNS
   StudioPath: bank:/GUNS
-  lastModified: 637918621020000000
+  lastModified: 637918724940000000
   FileSizes:
   - Name: Desktop
     Value: 243232
@@ -520,7 +547,7 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 637918621020000000
+  lastModified: 637918724940000000
   FileSizes:
   - Name: Desktop
     Value: 10148160
@@ -552,6 +579,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 416
+--- !u!114 &-289716065911079411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/player_hurt
+  m_EditorClassIdentifier: 
+  Path: event:/Player/player_hurt
+  Guid:
+    Data1: -1274075488
+    Data2: 1139211874
+    Data3: 135433388
+    Data4: -2076483197
+  Banks:
+  - {fileID: -9124558093553411455}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 310
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,12 +655,14 @@ MonoBehaviour:
   - {fileID: -4455480735215355838}
   - {fileID: 5864773612783962326}
   - {fileID: -3765632860979838009}
+  - {fileID: -2012451755212987792}
+  - {fileID: -289716065911079411}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5598885122981569723}
   StringsBanks:
   - {fileID: -7028937480550823950}
-  cacheTime: 637918621020000000
+  cacheTime: 637918724940000000
   cacheVersion: 131591
 --- !u!114 &881981843921286248
 MonoBehaviour:
@@ -729,10 +785,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/ENEMY.bank
   Name: ENEMY
   StudioPath: bank:/ENEMY
-  lastModified: 637918621020000000
+  lastModified: 637918724940000000
   FileSizes:
   - Name: Desktop
-    Value: 196032
+    Value: 213824
   Exists: 1
 --- !u!114 &2965819378156891907
 MonoBehaviour:
