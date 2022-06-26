@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyScript : MonoBehaviour
 {
+
     float mass = 1.0f; // defines the character mass
     [SerializeField] private float damage;
     Vector3 impact = Vector3.zero;
@@ -14,6 +15,8 @@ public class EnemyScript : MonoBehaviour
 
     [SerializeField] float punchForce = 50.0f;
     [SerializeField] float punchInterval = 1f;
+
+    [SerializeField] Animator anim;
 
     float timeToPunch;
 
@@ -36,6 +39,7 @@ public class EnemyScript : MonoBehaviour
         {
             navMeshAgent.SetDestination(playerManager.gameObject.transform.position);
 
+            anim.SetBool("isWalk", true);
             // apply the impact force:
             if (impact.magnitude > 0.2) navMeshAgent.Move(impact * Time.deltaTime);
             // consumes the impact energy each cycle:
