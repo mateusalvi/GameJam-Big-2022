@@ -13,6 +13,9 @@ public class EnemyScript : MonoBehaviour
     PlayerManager playerManager;
 
     [SerializeField] float punchForce = 50.0f;
+    [SerializeField] float punchInterval = 1f;
+
+    float timeToPunch;
 
     float timeToAwake;
     float awakeTime = 0.5f;
@@ -40,16 +43,17 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && Time.time > timeToPunch)
         {
             playerManager.AddImpact(other.gameObject.transform.position - transform.position, punchForce);
             other.gameObject.GetComponent<CharacterStats>().TakeDamage(damage);
+            timeToPunch = Time.time + punchInterval;
         }
     }
 
-     // call this function to add an impact force:
+    // call this function to add an impact force:
     public void AddImpact(Vector3 dir,float force)
     {
         dir.Normalize();
