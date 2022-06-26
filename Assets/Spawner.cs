@@ -42,6 +42,10 @@ public class Spawner : MonoBehaviour
         if(Time.time > timeToDecrease)
         {
             spawnInterval -= spawnTimeDecreaseOverTime;
+            if(spawnInterval < 1)
+            {
+                spawnInterval = 1;
+            }
             timeToDecrease = Time.time + decreaseInterval;
         }
 

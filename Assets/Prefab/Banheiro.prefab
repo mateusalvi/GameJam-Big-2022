@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e49b9d9a5ab53458bb3617ab8fc569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnInterval: 5
-  minSpawnInterval: 1
+  spawnInterval: 10
+  minSpawnInterval: 2
   openDoorInterval: 2
-  spawnTimeDecreaseOverTime: 5
-  decreaseInterval: 100
+  spawnTimeDecreaseOverTime: 1
+  decreaseInterval: 60
   enemyToSpawn: {fileID: 5702082039490719569, guid: e571c4df5622a9d46a4505d9624d9297, type: 3}
   spawnPoint: {fileID: 6120876462411957756}
   anim: {fileID: 431974623281839104}
