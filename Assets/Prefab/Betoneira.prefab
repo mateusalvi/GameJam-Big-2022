@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8385381444898544716}
   - component: {fileID: 237338211998657968}
   - component: {fileID: 2424185308457662137}
+  - component: {fileID: 129793810158167741}
   m_Layer: 0
   m_Name: Betoneira
   m_TagString: Untagged
@@ -81,6 +82,22 @@ MonoBehaviour:
   betoneiraBase: {fileID: 1947118289819485159}
   betoneiraGun: {fileID: 909820833750592505}
   rotationSpeed: 1
+--- !u!208 &129793810158167741
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174979254768310621}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.6, y: 1.715, z: 1.92}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.08, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1833441213047335344
 GameObject:
   m_ObjectHideFlags: 0
