@@ -67,7 +67,7 @@ public class Spawner : MonoBehaviour
              );
 
 
-        
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Enemies/enemy_spawn");    
         timeToClose = Time.time + openDoorInterval;
 
         anim.SetBool("IsOpen", true);

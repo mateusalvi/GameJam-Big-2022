@@ -13,6 +13,7 @@ public class CharacterStats : MonoBehaviour
     [SerializeField] Slider healthUI;
 
     public UnityEvent OnUnityDead;
+    public UnityEvent TookDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,11 @@ public class CharacterStats : MonoBehaviour
 
         if (health <= 0){
             killCharacter();
+        }
+
+        if (TookDamage != null)
+        {
+            TookDamage.Invoke();
         }
     }
 

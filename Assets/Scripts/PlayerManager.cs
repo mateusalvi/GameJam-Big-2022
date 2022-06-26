@@ -62,4 +62,9 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
+
+    public void PlayTookDamageSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Player/hurt");
+    }
 }
